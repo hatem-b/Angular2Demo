@@ -2,10 +2,15 @@
 
 import {Injectable} from '@angular/core';
 import {UIRouter} from 'ui-router-ng2/router';
-import {Hello} from './app/hello';
+import {HomeComponent} from './app/home/home.component';
+import {CarsComponent} from './app/cars/cars.component';
+import {CarListComponent} from './app/cars/car.list.component';
+
 
 const INITIAL_STATES: any[] = [
-  {name: 'App', url: '/', component: Hello}
+  {name: 'App', url: '/', component: HomeComponent},
+  {name: 'cars', url: '/cars', component: CarsComponent},
+  {name: 'cars.list', url: '/cars/list', component: CarListComponent}
 ];
 
 @Injectable()

@@ -37,7 +37,9 @@ module.exports = {
         loaders: [
           'ts'
         ]
-      }
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
+      { test: /\.html$/, loader: "html" },
     ]
   },
   plugins: [
