@@ -1,0 +1,20 @@
+<div class="container" loader wait-for="carListCtrl.loaded">
+	<div class="col s12 m7">
+		<div class="card small" ng-repeat="car in carListCtrl.cars | filter:search">
+			<div class="card-image">
+				<img class="materialboxed" src="{{'car.img'}}"/>
+				<span class="card-title">{{'car.model'}}</span>
+			</div>
+			<div class="card-content">
+				
+					{{'car.manufacturer'}}<br/>
+					<!-- {{car.model}} --><br/><br/>
+					<!-- <a class="blue-text" href="{{car.wiki}}" target = "_blank" > {{car.wiki}}</a> -->
+				
+			</div>
+			<div class="card-action">
+				<a href="#" ui-sref="cars.view({id : car.id})" class="waves-effect waves-light btn-flat"><i class="material-icons right">info</i>View details</a>
+			</div>
+		</div>
+	</div>
+</div>

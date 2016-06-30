@@ -1,0 +1,21 @@
+<table class="responsive-table centered highlight striped" loader wait-for="carListCtrl.loaded">
+	<thead>
+		<tr>
+			<th>Manufacturer</th>
+			<th>Model</th>
+			<th>Price</th>
+			<th>Wiki</th>
+			<th>Image</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="car in carListCtrl.cars | filter:search" ui-sref="cars.view({id : car.id})">
+			<td>{{'car.manufacturer'}}</td>
+			<td>{{'car.model'}}</td>
+			<td>{{'car.price'}}</td>
+			<td ><a class="blue-text" href="{{'car.wiki'}}" target = "_blank" > {{'car.wiki'}}</a></td>
+			<!-- <td><img src="{{ 'http://en.wikipedia.org/wiki/File:' + car.img}}"/></td> -->
+			<td><img src="{{'car.img'}}" style="height:50px;width:100px;" /></td>
+		</tr>
+	</tbody>
+</table>
