@@ -1,20 +1,29 @@
-<header class="navbar-fixed">
-	<nav>
-		<div class="nav-wrapper">
-			<a ui-sref="home" class="brand-logo">AngularCars</a>
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a ui-sref="cars.list.cards" id="bt_list">Cars</a></li>
-				<li><a ui-sref="cars.add" id="bt_add">Add</a></li>
-			</ul>
-		</div>
-	</nav>
-</header>
-<router-outlet class="main"></router-outlet>
-<footer class="page-footer">
-	<div class="footer-copyright">
-		<div class="container">
-			© 2016 Copyright Text
-			<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+<div class="body">
+	<header class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<a ui-sref="home" class="brand-logo">AngularCars</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a [routerLink]="['/cars']"   id="bt_list">Cars</a></li>
+					<li><a [routerLink]="['/cars/add']"  id="bt_add">Add</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="main">
+		<router-outlet></router-outlet>
+		<div class="fixed-action-btn" style="bottom: 50px; right: 20px;">
+			<a class="btn-floating btn-large waves-effect waves-light red" [routerLink]="['/cars/add']" >
+				<i class="material-icons">add</i>
+			</a>
 		</div>
 	</div>
-</footer>
+	<footer class="page-footer">
+		<div class="footer-copyright">
+			<div class="container">
+				© 2016 Copyright Text
+				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+			</div>
+		</div>
+	</footer>
+</div>

@@ -1,0 +1,17 @@
+<table class="responsive-table centered highlight striped" loader wait-for="carListCtrl.loaded">
+	<thead>
+		<tr>
+			<th>Manufacturer</th>
+			<th>Model</th>
+			<th>Price</th>
+			<th>Wiki</th>
+			<th>Image</th>
+		</tr>
+	</thead>
+	<tbody>
+	    <!-- router link only work on <a>, will be changed later
+		<tr *ngFor="let car of cars" [routerLink]="['/cars/'+car.id]" > -->
+		<tr car-row [car]="car" *ngFor="let car of (carsAsync | async)" (click)="router.navigate( ['/cars', car.id])">
+		</tr>
+	</tbody>
+</table>

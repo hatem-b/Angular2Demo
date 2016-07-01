@@ -1,10 +1,10 @@
 import { RouterConfig }          from '@angular/router';
-import {CarsComponent} from './cars.component';
-import {CarListComponent} from './car.list.component';
-import {CarComponent} from './car.component';
-import {CarFormComponent} from './carForm.component';
-import {CarListCardsComponent} from './car.list.cards.component';
-import {CarListTableComponent} from './car.list.table.component';
+import {CarsComponent} from './components/cars';
+import {CarListComponent} from './components/car.list';
+import {CarComponent} from './components/car';
+import {CarFormComponent} from './components/carForm';
+import {CarListCardsComponent} from './components/car.list.cards';
+import {CarListTableComponent} from './components/car.list.table';
 
 export const CarsRoutes: RouterConfig = [
   { path: 'cars',  component: CarsComponent,

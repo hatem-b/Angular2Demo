@@ -1,0 +1,36 @@
+<div class="container row">
+  <br/>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="manufacturer" type="text" class="validate" [(ngModel)]="car.manufacturer" name="manufacturer" required="">
+        <label for="manufacturer" class="active">Manufacturer</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="" id="search" type="text" class="validate" [(ngModel)]="car.model" name="model" required="">
+        <label for="search" class="active">Model</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <input placeholder="" id="search" type="text" class="validate" [(ngModel)]="car.price" name="price">
+        <label for="search" class="active">Price</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="" id="search" type="text" class="validate" [(ngModel)]="car.wiki" name="wiki">
+        <label for="search" class="active">Wiki</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="" id="search" type="text" class="validate" [(ngModel)]="car.img" name="img">
+        <label for="search" class="active">Image</label>
+      </div>
+    </div>
+  </form>
+  <a class="waves-effect waves-light btn s3 col" (click)="save();">Save</a>
+</div>
