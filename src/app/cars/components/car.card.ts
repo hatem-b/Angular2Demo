@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import { ROUTER_DIRECTIVES, Router } from '@angular/router';
-
+import { ImageBox } from '../../shared/directives/imgbox';
 
 var html = `<div class="card-image">				
 				<img class="materialboxed" src="{{car.img}}"/>
@@ -19,7 +19,7 @@ var html = `<div class="card-image">
 @Component({
   selector: 'car-card',
   template: html,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, ImageBox]
 })
 
 export class CarCardComponent {

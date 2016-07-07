@@ -10,8 +10,12 @@ import { CarRowComponent } from './car.row';
 })
 export class CarListTableComponent {
   carsAsync;
+  loaded = false;
 
   constructor(private carsService: CarsService,  public router: Router) {
     this.carsAsync = carsService.getCars();
+
+
+    this.carsAsync.then(() => {this.loaded = true;});
   }
 }

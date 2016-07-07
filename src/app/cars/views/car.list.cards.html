@@ -1,4 +1,4 @@
-<div class="container" loader wait-for="carListCtrl.loaded">
+<div class="container" loader [waitFor]="loaded" >
 	<div class="col s12 m7">
 		<div class="card small" *ngFor="let car of (carsAsync | async)">	
 			<car-card [car]="car"></car-card>
