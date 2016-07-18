@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-title',
-  templateUrl: 'app/home/title.html'
+  template: require('./title.html')
 })
 
 export class TitleComponent {

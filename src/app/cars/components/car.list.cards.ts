@@ -13,7 +13,7 @@ import {
 
 @Component({
   selector: 'car-list-cards',
-  templateUrl: 'app/cars/views/car.list.cards.html',
+  template: require('../views/car.list.cards.html'),
   directives: [ROUTER_DIRECTIVES, CarCardComponent],
   pipes: [FilterPipe]  
 })

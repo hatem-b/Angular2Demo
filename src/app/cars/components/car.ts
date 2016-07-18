@@ -14,7 +14,7 @@ import {
 
 @Component({
 	selector: 'car',
-	templateUrl: 'app/cars/views/car.html',
+	template: require('../views/car.html'),
 	directives: [ROUTER_DIRECTIVES, ImageBox],
 	animations: [
 	  trigger('fadeIn', [

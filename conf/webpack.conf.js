@@ -39,7 +39,8 @@ module.exports = {
         ]
       },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader' },
-      { test: /\.html$/, loader: "html" },
+      { test: /\.html$/,
+        loader: 'raw-loader' },
     ]
   },
   plugins: [
@@ -63,7 +64,8 @@ module.exports = {
       '.webpack.js',
       '.web.js',
       '.js',
-      '.ts'
+      '.ts',
+      '.html'
     ]
   },
   entry: `./${conf.path.src('index')}`,

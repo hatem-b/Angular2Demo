@@ -6,7 +6,7 @@ import { Car } from '../car.model';
 
 @Component({
   selector: 'car-form',
-  templateUrl: 'app/cars/views/carForm.html',
+  template: require('../views/carForm.html'),
   directives: [FORM_DIRECTIVES, ROUTER_DIRECTIVES]
 })
 export class CarFormComponent {

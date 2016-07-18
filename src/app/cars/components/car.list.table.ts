@@ -6,7 +6,7 @@ import {FilterPipe} from "../../shared/pipes/filter";
 
 @Component({
   selector: 'car-list-table',
-  templateUrl: 'app/cars/views/car.list.table.html',
+  template: require('../views/car.list.table.html'),
   directives: [ROUTER_DIRECTIVES, CarRowComponent],
   pipes: [FilterPipe]
 })

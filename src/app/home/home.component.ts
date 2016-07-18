@@ -6,9 +6,9 @@ import {TitleComponent} from './title.component';
 import {FooterComponent} from './footer.component';
 
 
-@Component({
+@Component({ 
   selector: 'App',
-  templateUrl: 'app/home/main.html',
+  template: require("./main.html"),
   directives : [ROUTER_DIRECTIVES, HeaderComponent, TitleComponent, FooterComponent]
 })
 

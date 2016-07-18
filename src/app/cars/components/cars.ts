@@ -4,7 +4,7 @@ import { CarsService } from '../cars.service';
 
 @Component({
   selector: 'cars',
-  templateUrl: 'app/cars/index.html',
+  template: require('../index.html'),
   directives: [ROUTER_DIRECTIVES],
   providers: [CarsService]
 })
