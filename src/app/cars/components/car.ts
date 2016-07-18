@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES, Router, ActivatedRoute } from '@angular/router';
 import { CarsService } from '../cars.service';
 import { Car } from '../car.model';
 
+
 @Component({
 	selector: 'car',
 	templateUrl: 'app/cars/views/car.html',

@@ -1,6 +1,12 @@
 <div class="container" loader [waitFor]="loaded" >
+	<div class="row">
+    <div class="input-field col s12 l6 offset-l6">
+      <input placeholder="" id="search" type="text" class="validate" #searchInput (keyup)="O">
+      <label for="search">Search</label>
+    </div>
+  </div>
 	<div class="col s12 m7">
-		<div class="card small" *ngFor="let car of (carsAsync | async)">	
+		<div class="card small" *ngFor="let car of (carsAsync | async) | filter:[searchInput.value] ">	
 			<car-card [car]="car"></car-card>
 		</div>
 	</div>

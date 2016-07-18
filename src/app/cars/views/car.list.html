@@ -1,19 +1,14 @@
 <div class="container" >
  <br/>
-  <div class="row">
-    <div class="input-field col s12 l6 offset-l6">
-      <input placeholder="" id="search" type="text" class="validate" ([ngModel])="search">
-      <label for="search">Search</label>
-    </div>
-  </div>
+  
   <div class="row z-depth-1">
     <div class="col s12">
       <ul class="tabs">
         <li class="tab col s3">
-          <a [class.active]="router.url.indexOf('cards')>-1" [routerLink]="['cards']" id="bt_cards">Cards {{router.url.indexOf('cards')>-1}}</a>
+          <a [class.active]="router.url.indexOf('cards')>-1" [routerLink]="['cards']" id="bt_cards">Cards</a>
         </li>
         <li class="tab col s3">
-          <a [class.active]="router.url.indexOf('table')>-1" [routerLink]="['table']" id="bt_table">Table {{router.url.indexOf('table')>-1}}</a>
+          <a [class.active]="router.url.indexOf('table')>-1" [routerLink]="['table']" id="bt_table">Table</a>
          </li>
       </ul>
     </div>
