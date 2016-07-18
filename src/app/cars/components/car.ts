@@ -2,12 +2,38 @@ import {Component} from '@angular/core';
 import { ROUTER_DIRECTIVES, Router, ActivatedRoute } from '@angular/router';
 import { CarsService } from '../cars.service';
 import { Car } from '../car.model';
+import { ImageBox } from '../../shared/directives/imgbox';
 
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate
+} from '@angular/core';
 
 @Component({
 	selector: 'car',
 	templateUrl: 'app/cars/views/car.html',
-	directives: [ROUTER_DIRECTIVES]
+	directives: [ROUTER_DIRECTIVES, ImageBox],
+	animations: [
+	  trigger('fadeIn', [
+	    //state('in', style({opacity: 1, transform: 'translateX(0)'})),
+	    transition('void => *', [
+	      style({
+	        opacity: 0,
+	        transform: 'translateX(-100%)'
+	      }),
+	      animate('0.5s ease-in')
+	    ]),
+	    transition('* => void', [
+	      animate('0.5s 10 ease-out', style({
+	        opacity: 0,
+	        transform: 'translateX(100%)'
+	      }))
+	    ])
+	  ])
+	]
 })
 export class CarComponent {
 	car = {};

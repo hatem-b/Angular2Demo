@@ -2,7 +2,7 @@
 	<header class="navbar-fixed">
 		<nav>
 			<div class="nav-wrapper">
-				<a ui-sref="home" class="brand-logo">AngularCars</a>
+				<a [routerLink]="['/home']" class="brand-logo">AngularCars</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a [routerLink]="['/cars']"   id="bt_list">Cars</a></li>
 					<li><a [routerLink]="['/cars/add']"  id="bt_add">Add</a></li>

@@ -6,8 +6,8 @@
     </div>
   </div>
 	<div class="col s12 m7">
-		<div class="card small" *ngFor="let car of (carsAsync | async) | filter:[searchInput.value] ">	
-			<car-card [car]="car"></car-card>
-		</div>
+		
+			<car-card [car]="car" *ngFor="let car of (carsAsync | async) | filter:[searchInput.value] " ></car-card>
+
 	</div>
 </div>

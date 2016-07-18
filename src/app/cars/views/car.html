@@ -1,7 +1,7 @@
 <div class="container" >
 	<br/>
 	<div class="col s12 m7" loader [waitFor]="loaded">
-		<div class="card">
+		<div class="card" @fadeIn="''">
 			<div class="card-image">
 				<img class="materialboxed" src="{{car.img}}"/>
 				<span class="card-title">{{car.model}}</span>
