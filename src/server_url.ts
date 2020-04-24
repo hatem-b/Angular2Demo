@@ -1,1 +1,1 @@
-export const ServerUrl = 'http://node-hatem.azurewebsites.net';
+export const ServerUrl = 'https://node-hatem.azurewebsites.net';
